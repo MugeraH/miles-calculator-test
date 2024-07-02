@@ -1,0 +1,65 @@
+.container {
+  height: 100%;
+  padding: 5rem;
+}
+
+.content {
+  height: auto;
+  min-height: 80%;
+  z-index: 1;
+  border-radius: 3px;
+}
+
+.heading {
+  text-align: center;
+}
+
+.info {
+  margin: 0px auto;
+  width: auto;
+  max-width: 600px;
+}
+
+.form-wrapper {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.flex-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.form {
+  width: 70%;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-input {
+  width: 400px;
+  margin: 0px 10px;
+}
+.trip-toggle {
+  margin: 20px 0px;
+}
+
+.btn-wrapper {
+  margin: 0px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.cards-wrapper {
+  flex-wrap: wrap;
+
+  justify-content: center;
+}
+.card {
+  width: 500px;
+}
