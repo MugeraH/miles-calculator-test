@@ -8,6 +8,7 @@
   min-height: 80%;
   z-index: 1;
   border-radius: 3px;
+  padding: 20px 0px;
 }
 
 .heading {
@@ -19,14 +20,6 @@
   width: auto;
   max-width: 600px;
 }
-
-.form-wrapper {
-  display: flex;
-  /* justify-content: center; */
-  align-items: center;
-  flex-wrap: wrap;
-}
-
 .flex-box {
   display: flex;
   align-items: center;
@@ -40,9 +33,15 @@
   flex-direction: column;
   justify-content: center;
 }
+.form-wrapper {
+  display: flex;
+
+  align-items: center;
+  flex-wrap: wrap;
+}
 
 .form-input {
-  width: 400px;
+  width: 450px;
   margin: 0px 10px;
 }
 .trip-toggle {
@@ -55,6 +54,14 @@
   align-items: center;
 }
 
+.route-title {
+  text-align: center;
+}
+
+.route-title h6 {
+  font-size: 30px;
+  font-weight: normal;
+}
 .cards-wrapper {
   flex-wrap: wrap;
 

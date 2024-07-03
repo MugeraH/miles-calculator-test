@@ -14,6 +14,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCardModule } from '@angular/material/card';
+import { MatTabsModule } from '@angular/material/tabs';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -30,6 +32,8 @@ import { MatCardModule } from '@angular/material/card';
     MatDividerModule,
     MatProgressSpinnerModule,
     MatCardModule,
+    MatTabsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
