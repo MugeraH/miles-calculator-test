@@ -1,1 +1,89 @@
-<p>redemptions-search works!</p>
+<div class="content">
+  <div class="heading">
+    <div class="info">
+      Get to know how may points you would need have to redeem a flight to the
+      destination of your choice
+    </div>
+  </div>
+
+  <form
+    (ngSubmit)="searchForm.form.valid && getRouteData()"
+    #searchForm="ngForm"
+  >
+    <div class="form">
+      <div class="form-wrapper">
+        <mat-form-field class="form-input" appearance="outline">
+          <mat-label>Flying with</mat-label>
+          <mat-select required [(ngModel)]="carrier" name="carrier">
+            <mat-option value="KQ">Kenya Airways</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="form-input" appearance="outline">
+          <mat-label>Origin</mat-label>
+          <mat-select required [(ngModel)]="origin" name="origin">
+            <mat-option *ngFor="let route of destinationData" [value]="route">
+              {{ route }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="form-input" appearance="outline">
+          <mat-label>Destination</mat-label>
+
+          <mat-select
+            class="mat-input-element mat-form-field-autofill-control ng-tns-c10-5 ng-pristine ng-invalid cdk-text-field-autofill-monitored ng-touched"
+            required
+            [(ngModel)]="destination"
+            name="destination"
+          >
+            <mat-option *ngFor="let route of destinationData" [value]="route">
+              {{ route }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="btn-wrapper">
+        <button type="submit" mat-flat-button class="btn-success">Search</button>
+      </div>
+    </div>
+  </form>
+
+  <div *ngIf="showResult" class="route-title">
+    <h6>{{ origin }} - {{ destination }}</h6>
+  </div>
+
+  <div class="flex-box cards-wrapper">
+    <mat-card *ngIf="showResult" class="card" appearance="outlined">
+      <mat-card-header>
+        <mat-card-title>Economy Class</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="flex-box">
+          <h4>Points to Redeem</h4>
+          -
+          <h4>{{ result.EconomyClass }}</h4>
+        </div>
+
+        <div>
+          <button mat-flat-button color="primary">Search flight</button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card *ngIf="showResult" class="card" appearance="outlined">
+      <mat-card-header>
+        <mat-card-title>Business Class</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="flex-box">
+          <h4>Points to Redeem</h4>
+          -
+          <h4>{{ result.BusinessClass }}</h4>
+        </div>
+
+        <div>
+          <button mat-flat-button color="primary">Search flight</button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
