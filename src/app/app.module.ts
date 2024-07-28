@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,8 +17,10 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
 import { FormsModule } from '@angular/forms';
+import { RedemptionsSearchComponent } from './components/redemptions-search/redemptions-search.component';
+import { MilesCalculatorComponent } from './components/miles-calculator/miles-calculator.component';
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, RedemptionsSearchComponent, MilesCalculatorComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -34,6 +37,7 @@ import { FormsModule } from '@angular/forms';
     MatCardModule,
     MatTabsModule,
     FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
