@@ -9,40 +9,57 @@ body {
 body {
   margin: 0;
   padding: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: RobotoFlex, sans-serif;
+  line-height: normal;
+  color: rgba(0, 0, 0, 0.87);
 }
 
 .container {
-  height: 100%;
+  /* height: 100%; */
   padding: 5rem;
+}
+
+.container .wrapper {
+  width: 80%;
+  margin: 10px auto;
 }
 
 .content {
   height: auto;
-  min-height: 80%;
-  z-index: 1;
-  border-radius: 3px;
-  padding: 20px 0px;
+  min-height: 700px;
 }
 
 .heading {
   text-align: center;
+}
+.heading h3 {
+  margin-bottom: 32px;
+  color: #0d0d0d;
+  font-family: CabritoFlare, serif;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: unset;
 }
 
 .info {
   margin: 20px auto;
   width: auto;
   max-width: 600px;
+  font-size: 18px;
 }
 .flex-box {
   display: flex;
   align-items: center;
   gap: 20px;
 }
+.flex-box h4 {
+  font-size: 18px;
+  font-weight: normal;
+}
 
 .form {
-  width: 70%;
-  margin: 30px auto;
+  width: 90%;
+  margin: 25px auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,7 +73,7 @@ body {
 }
 
 .form-input {
-  width: 30%;
+  width: 100%;
   margin: 0px 10px;
 }
 .trip-toggle {
@@ -82,6 +99,18 @@ body {
 
   justify-content: center;
 }
+
 .card {
   width: 500px;
+  border-top: 8px solid red !important;
+  border-radius: 10px;
+  opacity: 1;
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
+
+.card.ng-leave {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+

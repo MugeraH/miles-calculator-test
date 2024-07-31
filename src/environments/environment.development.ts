@@ -1,5 +1,5 @@
 export const environment = {
   production: false,
-  // apiUrl: 'https://localhost:44386/api',
-  apiUrl: 'https://localhost:7153/api',
+  // apiUrl: 'https://localhost:44318/api',
+  apiUrl: 'https://testloyaltyapi.kenya-airways.com/api',
 };

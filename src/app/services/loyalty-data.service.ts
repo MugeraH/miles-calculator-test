@@ -7,18 +7,16 @@ import { environment } from 'src/environments/environment.development';
   providedIn: 'root',
 })
 export class LoyaltyDataService {
-  private url = 'RedemptionData';
+
   constructor(private http: HttpClient) {}
 
   public getRedemptionData(origin: string, destination: string) {
     return this.http.get<RedemptionRouteData>(
-      `${environment.apiUrl}/${this.url}/search?origin=${origin}&destination=${destination}`
+      `${environment.apiUrl}/RedemptionData/search?origin=${origin}&destination=${destination}`
     );
   }
 
   public getDestinationsData() {
-    return this.http.get<string[]>(
-      `${environment.apiUrl}/${this.url}/destinations`
-    );
+    return this.http.get<string[]>(`${environment.apiUrl}/DestinationData`);
   }
 }
