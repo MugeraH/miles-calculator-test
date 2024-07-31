@@ -40,11 +40,6 @@ export class RedemptionsSearchComponent implements OnInit {
   ) {}
 
   getRouteData() {
-    console.log('what are you waiting for');
-    // if (this.origin === '' || this.destination) {
-    //   this.isError = true;
-    //   return;
-    // }
     this.loyaltyDataService
       .getRedemptionData(this.origin, this.destination)
       .subscribe((res: RedemptionRouteData) => {
